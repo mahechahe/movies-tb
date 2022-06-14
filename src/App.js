@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Nav } from './components/Nav/Nav';
+import { Description } from './components/Description/Description';
+import { Movies } from './components/Movies/Movies';
+import { Context } from './Context/Context';
+import { useContextHook } from './Context/useContext';
 
 function App() {
+
+  const provider = useContextHook()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={provider}>
+      <section className='section-container'>
+        <div className='div-description-container'>
+          <div className='div-absolute-img'></div>
+          <Nav></Nav>
+          <Description></Description>
+        </div>
+        <Movies></Movies>
+      </section>
+    </Context.Provider>
   );
 }
 

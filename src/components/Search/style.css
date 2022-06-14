@@ -1,0 +1,70 @@
+.form-container--search{
+    width: 700px;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+.form-div-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.form-div-search label{
+    color: white;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.form-div-search input{
+    height: 45px;
+    width: 350px;
+    background: #292929;
+    border: none;
+    padding: 5px;
+    color: white;
+    font-size: 17px;
+    border-radius: 8px;
+}
+.fomr-div--button{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.button-search{
+    height: 45px;
+    width: 100%;
+    border: none;
+    background: #ef233c;
+    border-radius: 8px;
+    margin-left: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    color: white;
+}
+.button-search:hover{
+    background: rgb(239, 35, 60, 0.6);
+}
+.trending-button{
+    background: #02c39a;
+    position: absolute;
+    width: 100px;
+    right: -300px;
+    top: calc(50% - 5px);
+}
+.div-error{
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 45px;
+    left: -360px;
+    border-radius: 8px;
+    top: calc(50% - 5px);
+    background: rgb(239, 35, 60, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.div-error p{
+    color: white;
+}
